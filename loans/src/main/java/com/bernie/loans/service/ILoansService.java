@@ -20,7 +20,7 @@ public interface ILoansService {
     /**
      *
      * @param loansDto - LoansDto Object
-     * @return boolean indicating if the update of card details is successful or not
+     * @return boolean indicating if the update of loan details is successful or not
      */
     boolean updateLoan(LoansDto loansDto);
 
