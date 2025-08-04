@@ -1,0 +1,38 @@
+# Common configuration for Accounts Service
+server:
+  port: 8080
+
+spring:
+  application:
+    name: accounts
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "accounts"
+    description: "Bernie Bank Accounts Application"
+    version: "1.0.0"
+
+accounts:
+  message: "Welcome to Bernie Bank accounts related local APIs "
+  contactDetails:
+    name: "Bernie Truong"
+    email: "bernie@berniebank.com"

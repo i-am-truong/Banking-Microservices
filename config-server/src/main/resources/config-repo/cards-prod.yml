@@ -1,0 +1,19 @@
+# Production environment configuration for Cards Service
+spring:
+  datasource:
+    url: jdbc:mysql://prod-db:3306/cardsdb
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: "${DB_USERNAME:cards_user}"
+    password: "${DB_PASSWORD:secure_password}"
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: validate
+
+cards:
+  message: "Welcome to Bernie Bank cards production APIs "
+  
+logging:
+  level:
+    com.bernie.cards: INFO
+    org.springframework.web: WARN

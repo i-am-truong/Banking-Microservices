@@ -1,0 +1,17 @@
+# Development environment configuration for Loans Service
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+loans:
+  message: "Welcome to Bernie Bank loans related development APIs "
+  
+logging:
+  level:
+    com.bernie.loans: DEBUG
+    org.springframework.web: DEBUG

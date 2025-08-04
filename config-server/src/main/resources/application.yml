@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config-repo/
+        encrypt:
+          enabled: true
+  security:
+    user:
+      name: configuser
+      password: configpass
+
+encrypt:
+  key: "bernie-bank-symmetric-key"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

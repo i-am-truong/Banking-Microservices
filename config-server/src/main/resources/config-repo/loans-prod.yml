@@ -1,0 +1,19 @@
+# Production environment configuration for Loans Service
+spring:
+  datasource:
+    url: jdbc:mysql://prod-db:3306/loansdb
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: "${DB_USERNAME:loans_user}"
+    password: "${DB_PASSWORD:secure_password}"
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: validate
+
+loans:
+  message: "Welcome to Bernie Bank loans production APIs "
+  
+logging:
+  level:
+    com.bernie.loans: INFO
+    org.springframework.web: WARN

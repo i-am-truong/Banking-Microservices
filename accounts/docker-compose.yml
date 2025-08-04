@@ -1,37 +1,60 @@
 services:
+  config-server:
+    image: "bernietruong/config-server:latest"
+    container_name: config-server-ms
+    ports:
+      - "8888:8888"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - berniebank
   accounts:
     image: "bernietruong/accounts:accounts"
     container_name: accounts-ms
     ports:
       - "8080:8080"
+    depends_on:
+      - config-server
     deploy:
       resources:
         limits:
           memory: 700m
     networks:
       - berniebank
+    environment:
+      SPRING_CONFIG_IMPORT: "configserver:http://config-server:8888"
   loans:
     image: "bernietruong/loans:loans"
     container_name: loans-ms
     ports:
       - "8090:8090"
+    depends_on:
+      - config-server
     deploy:
       resources:
         limits:
           memory: 700m
     networks:
       - berniebank
+    environment:
+      SPRING_CONFIG_IMPORT: "configserver:http://config-server:8888"
   cards:
     image: "bernietruong/cards:cards"
     container_name: cards-ms
     ports:
       - "9000:9000"
+    depends_on:
+      - config-server
     deploy:
       resources:
         limits:
           memory: 700m
     networks:
       - berniebank
+    environment:
+      SPRING_CONFIG_IMPORT: "configserver:http://config-server:8888"
 networks:
   berniebank:
     driver: "bridge"

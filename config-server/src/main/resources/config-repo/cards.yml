@@ -1,0 +1,38 @@
+# Common configuration for Cards Service
+server:
+  port: 9000
+
+spring:
+  application:
+    name: cards
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "cards"
+    description: "Bernie Bank Cards Application"
+    version: "1.0.0"
+
+cards:
+  message: "Welcome to Bernie Bank cards related local APIs "
+  contactDetails:
+    name: "Bernie Truong"
+    email: "bernie@berniebank.com"

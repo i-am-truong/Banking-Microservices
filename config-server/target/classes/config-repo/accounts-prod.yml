@@ -1,0 +1,19 @@
+# Production environment configuration for Accounts Service
+spring:
+  datasource:
+    url: jdbc:mysql://prod-db:3306/accountsdb
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: "${DB_USERNAME:accounts_user}"
+    password: "{cipher}AQA1Z8vI9J2JfXL5K4N7P0Q3S6T9W2X5Y8A1B4C7D0E3F6G9H2I5J8K1L4M7N0P3Q6R9S2T5U8V1W4X7Y0Z3"
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: validate
+
+accounts:
+  message: "Welcome to Bernie Bank accounts production APIs "
+  
+logging:
+  level:
+    com.bernie.accounts: INFO
+    org.springframework.web: WARN

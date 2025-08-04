@@ -1,0 +1,17 @@
+# Development environment configuration for Cards Service
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+cards:
+  message: "Welcome to Bernie Bank cards related development APIs "
+  
+logging:
+  level:
+    com.bernie.cards: DEBUG
+    org.springframework.web: DEBUG
