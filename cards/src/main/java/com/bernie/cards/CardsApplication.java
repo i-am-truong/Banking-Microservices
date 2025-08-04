@@ -17,7 +17,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
                 description = "Bernie Bank Cards microservice REST API Documentation",
                 version = "v1",
                 contact = @Contact(
-                        name = "Bernie Bank",
+                        name = "Bernie Truong",
                         email = "bernie@gmail.com",
                         url = "https://bernietruong.id.vn"
                 ),

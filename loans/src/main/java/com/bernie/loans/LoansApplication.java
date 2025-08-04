@@ -17,8 +17,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
                 description = "Bernie Loans microservice REST API Documentation",
                 version = "v1",
                 contact = @Contact(
-                        name = "Bernie Bank",
-                        email = "tutor@eazybytes.com",
+                        name = "Bernie Truong",
+                        email = "bernie@gmail.com",
                         url = "https://bernietruong.id.vn"
                 ),
                 license = @License(
