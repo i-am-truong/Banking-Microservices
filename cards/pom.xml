@@ -11,6 +11,7 @@
     <groupId>com.bernie</groupId>
     <artifactId>cards</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>cards</name>
     <description>cards</description>
     <url/>
@@ -78,10 +79,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -94,7 +91,18 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <to>
+                        <image>bernietruong/${project.artifactId}:cards</image>
+                    </to>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 
 </project>
