@@ -183,7 +183,7 @@ public class LoansController {
 
     @Operation(
             summary = "Get Build information",
-            description = "Get Build information that is deployed into cards microservice"
+            description = "Get Build information that is deployed into loans microservice"
     )
     @ApiResponses({
             @ApiResponse(
