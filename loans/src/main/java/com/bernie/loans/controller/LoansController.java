@@ -208,7 +208,7 @@ public class LoansController {
 
     @Operation(
             summary = "Get Java version",
-            description = "Get Java versions details that is installed into cards microservice"
+            description = "Get Java versions details that is installed into loans microservice"
     )
     @ApiResponses({
             @ApiResponse(
