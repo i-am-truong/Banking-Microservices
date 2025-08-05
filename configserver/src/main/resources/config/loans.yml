@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to Bernie Bank loans related local APIs "
+  contactDetails:
+    name: "Bernie Truong - Developer"
+    email: "bernie@gmail.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345
